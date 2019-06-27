@@ -1,0 +1,35 @@
+﻿@using TAC.Utils.Helpers
+
+@model events.tac.local.Models.EventsList
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Importer/Views/Shared/Layout.cshtml";
+}
+
+<div class="content-list newslist">
+    <ol class="media-list">
+        @foreach (var item in Model.Events)
+        {
+            <li class="media media-align-middle">
+
+
+
+
+
+                <div class="media-left">
+                    <a href="Event-Detail.html"><img src="Images/Climbing-the-Face-of-Half-Dome.jpg" alt="Female climber rappellling" width="150" height="100" /></a>
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading">
+                        <a href="Event-Detail.html">@item.ContentHeading</a>
+                    </h3>
+                    <div class="description">
+                        <p>@item.ContentIntro</p>
+                    </div>
+                </div>
+                <div class="metadata well">@item.EventStartDate</div>
+            </li>
+        }
+    </ol>
+    @Html.Pager(Model.PageSize, Model.TotalResultCount)
+</div>

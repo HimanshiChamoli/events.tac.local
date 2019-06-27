@@ -1,0 +1,7 @@
+﻿<Project>
+  <FolderSync SynchronizeProjectOutputFolderOnBuild="False">
+    <Folder SourceFolder="Contents\fonts\" DestinationFolder="fonts\" Mode="Mirror" Pattern="*.*" />
+    <Folder SourceFolder="Contents\Css\" DestinationFolder="Css\" Mode="Mirror" Pattern="*.*" />
+    <Folder SourceFolder="Contents\Images\" DestinationFolder="Images\" Mode="Copy" Pattern="*.*" />
+  </FolderSync>
+</Project>
